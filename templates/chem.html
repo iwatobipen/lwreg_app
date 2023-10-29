@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}This is an example page{% endblock %}
+
+
+
+
+
+{% block content %}
+  <h1>Light weight registration!</h1>
+  <div id="jsme_container"></div>
+  <form method="POST" action="/chempage">
+    <input type="hidden" name="smiles" id="smiles">
+    <!-- <input type="button" value="Get smiles via document.JME" onclick="alert(document.JME.smiles());"> -->
+    <!-- <input type="button" name="submitbutton" value="Get smiles via document.JME" onclick="document.JME.smiles();"> -->
+    <input type="submit" onclick=getSmiles(); value="Regist">
+  </form>
+{% endblock %}
+
+{{ bootstrap.load_js() }}
